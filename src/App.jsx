@@ -1,8 +1,10 @@
-import rocketImg from "./assest/rocket.png";
 import SignUp from "./components/SignUp";
+import rocketImg from "./assest/rocket.png";
 
 import "./App.css";
+
 function App() {
+
   return (
     <div className="container mt-3">
       <div className="row">

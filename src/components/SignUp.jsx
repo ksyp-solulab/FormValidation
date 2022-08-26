@@ -21,6 +21,7 @@ const SignUp = () => {
           .oneOf([Yup.ref('password'), null], 'Password must match')
           .required('Confirm password is required'),
       })
+      
   return (
     <Formik
       initialValues={{
@@ -30,8 +31,7 @@ const SignUp = () => {
         password: "",
         confirmPassword: "",
       }}
-      validationSchema={validate}
-    >
+      validationSchema={validate}>
       {(formik) => (
         <div>
           <h1 className="my-4 font-waight-bold-display-4">Sign Up</h1>
@@ -40,11 +40,7 @@ const SignUp = () => {
             <TextField label="last Name" name="lastName" type="text" />
             <TextField label="Email" name="email" type="email" />
             <TextField label="password" name="password" type="password" />
-            <TextField
-              label="Confirm Password"
-              name="confirmPassword"
-              type="password"
-            />
+            <TextField label="Confirm Password" name="confirmPassword" type="password"/>
             <button className="btn btn-dark mt-3" type="submit">
               Register
             </button>
